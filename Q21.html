@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task2</title>
+
+</head>
+
+<body>
+  <h1>21. They think of something you could store in a JavaScript Object.</h1>
+  <p>Write a program that creates Objects containing these items.</p>
+  <hr>
+
+  <fieldset>
+    <legend>Object creates items list</legend>
+    <p id="myList3"></p>
+    <p id="myList1"></p>
+
+</body>
+
+<script>
+  const Items = { city: "Lahore", country: "Pakistan", language: "Urdu" };
+  document.getElementById("myList3").innerHTML = JSON.stringify(Items);
+
+
+</script>
+
+</html>

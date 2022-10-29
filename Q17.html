@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task2</title>
+
+  <script>
+    
+  </script>
+
+</head>
+
+<body>
+  <h1>17. Shrinking Guest List: </h1>
+  <p>You just found out that your new dinner table won’t arrive in time for the dinner,
+    and you have space for only two guests. <br>
+    • Start with your program from Exercise 16. <br>
+    Add a new line that prints a message saying that you can invite only two people for dinner.<br>
+    • Remove guests from your list one at a time until only two names remain in your list. <br>
+    Each time you pop a name from your list, <br>
+    print a message to that person letting them know you’re sorry you can’t invite them to dinner.<br>
+    • Print a message to each of the two people still on your list, letting them know they’re still invited.<br>
+    • Remove the last two names from your list, so you have an empty list. Print your list to make sure you actually
+    have an empty list at the end of your program.
+    <br>
+  </p>
+
+  <fieldset>
+    <legend>Guest list to send invitation</legend>
+    <p id="myList"></p>
+    
+  </fieldset>
+  <hr>
+  <input type="button" value="Send Invitation" onClick='inviteMsg()' />
+  <p id="msg1"></p>
+
+  <hr>
+  <fieldset>
+    <legend>Remove Guest list to send invitation</legend>
+    <div id="removeLast"></div>
+  </fieldset>
+  <input type="button" value="Remove Guest" onClick='removeLastGuest()' />
+  <hr>
+  <input type="button" value="Remove Guest" onClick='removeAllGuest()' />
+  <p id="empatyList" ></p>
+
+
+
+</body>
+
+<script src="./Q17.js"> </script>
+
+</html>

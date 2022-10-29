@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+  
+<script>
+  
+const data = ["Naoman", "Arslan", "Umer", "Momin"]; // add name of friends in array
+document.getElementById("myList").innerHTML = JSON.stringify(data)
+
+//add one new guest to the end of your list
+const data1 = data.push('aamir')
+document.getElementById("myList1").innerHTML = JSON.stringify(data)
+
+
+//Add one new guest to the beginning of your array.
+const data2 = data.unshift("farooq");
+document.getElementById("myList2").innerHTML = JSON.stringify(data)
+
+// Add one new guest to the middle of your array.
+const data3 = data.splice(2, 0, 'Jameel');
+document.getElementById("myList3").innerHTML = JSON.stringify(data)
+
+</script>
+
+
+</head>
+<body>
+    <h1>16.	More Guests:  </h1>
+    <p>You just found a bigger dinner table, so now more space is available. <br>
+      Think of three more guests to invite to dinner.<br>
+      • Start with your program from Exercise 15. Add a print statement to the end of your program informing people that you found a bigger dinner table.<br>
+      • Add one new guest to the beginning of your array.<br>
+      • Add one new guest to the middle of your array. <br>
+      • Use append() to add one new guest to the end of your list. <br>
+      • Print a new set of invitation messages, one for each person in your list.<br>
+    </p>
+    
+    <fieldset>
+      <legend>Guest list to send invitation</legend>
+      <div id="myList"></div>
+    </fieldset>
+        
+    
+
+    <h3>add one new guest to the end</h3>
+    <p id="myList1"></p> 
+    <h3>Add one new guest to the beginning </h3> 
+    <p id="myList2"></p>
+    <h3>Add one new guest to the middle</h3>
+    <p id="myList3"></p>
+    
+    
+
+
+        
+</body>
+
+<script src="./task2.js"> </script>
+</html>
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task2</title>
+  <script>
+    function convertCase(text) {
+      var strUCase = text.toUpperCase();
+      document.getElementById("dispText1").innerHTML = strUCase;
+    }
+
+    function convertCase1(text) {
+      var strUCase = text.toLowerCase();
+      document.getElementById("dispText").innerHTML = strUCase;
+    }
+
+    function titleCase(text) {
+      var sentence = text.toLowerCase().split(" ");
+      for (var i = 0; i < sentence.length; i++) {
+        sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+      }
+      document.getElementById("dispText2").innerHTML = sentence.join(" ");
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Name Cases:</h1>
+  <p> Store a person name in a variable, and then print that person’s name in lowercase, uppercase, and titlecase.</p>
+
+
+
+  <h3>JavaScript-Display Input Text into Namecase Characters.</h3>
+  <br>
+  <p id="dispText1"></p>
+  <p id="dispText"></p>
+  <p id="dispText2"></p>
+  <input type="text" id="inputText" /><br><br>
+
+  <input type="button" value="Display in Uppercase" onClick='convertCase(inputText.value)' />
+  <!--Uppercase text will display here-->
+  <br><br>
+  <input type="button" value="Display in Lowercase" onClick='convertCase1(inputText.value)' />
+  <br><br>
+  <input type="button" value="Display in titleCase" onClick='titleCase(inputText.value)' />
+
+
+</body>
+
+</html>

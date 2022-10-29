@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    
+    <style>
+        .red {
+            color:red;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>28.	Stages of Life:   </h1>
+    <p>
+        Write an if-else chain that determines a person’s stage of life. <br>
+        Set a value for the variable age, and then: <br>
+• If the person is less than 2 years old, print a message that the person is a baby.<br>
+• If the person is at least 2 years old but less than 4, print a message that the person is a toddler.<br>
+• If the person is at least 4 years old but less than 13, print a message that the person is a kid.<br>
+• If the person is at least 13 years old but less than 20, print a message that the person is a teenager. <br>
+• If the person is at least 20 years old but less than 65, print a message that the person is an adult. <br>
+• If the person is age 65 or older, print a message that the person is an elder.
+    
+    </p>
+
+   
+        
+</body>
+<script>
+    var age = parseInt(prompt("Please enter your age"));
+		if(age<2)
+		document.write("Person is a baby <br />");
+		
+        if(age<4 && age>=2)
+		document.write("person is a toddler <br />");
+        
+        if(age<13 && age>=4)
+		document.write("person is a Kid <br />");
+
+        if(age<20 && age>=13)
+		document.write("person is a Teenager <br />");
+
+        if(age<=65 && age>=20)
+		document.write("person is a Adult <br />");
+
+        if(age>65)
+		document.write("person is a Older <br />");
+
+</script>
+
+</html>
+
+
+

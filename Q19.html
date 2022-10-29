@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task2</title>
+
+</head>
+
+<body>
+  <h1>19. Dinner Guests: </h1>
+  <p>Working with one of the programs from Exercises 14 through 18, <br>
+    print a message indicating the number of people you are inviting to dinner.</p>
+  <fieldset>
+
+    <legend>Print your array in its original order</legend>
+
+    <p id="msg1"></p>
+
+  </fieldset>
+  <hr>
+
+
+
+</body>
+
+<script>
+  const data = ["Naoman", "Arslan", "Umer", "Momin", "Aamir", "Jameel"];
+  document.getElementById("msg1").innerHTML = JSON.stringify("You are inviting: " + data.length + " Guest on dinner");
+
+</script>
+
+
+</html>

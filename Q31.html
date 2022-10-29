@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task2</title>
+
+</head>
+
+<body>
+  <h1>31. No Users: </h1>
+  <p>
+    Add an if test to Exercise 28 to make sure the list of users is not empty. <br>
+    • If the list is empty, print the message We need to find some users! <br>
+    • Remove all of the usernames from your array, and make sure the correct message is printed.
+
+  </p>
+
+  <fieldset>
+    <legend>List of Users before remove</legend>
+    <div id="myList"></div>
+  </fieldset>
+
+  <input type="button" value="Remove User" onClick='removeUser()' />
+  <!-- <button onclick="removeItemFromArray(newArray)">Remove User</button> -->
+  <div id="removeLast"></div>
+  <p id='msg1'></p>
+
+</body>
+
+<script>
+  const data = ["Naoman", "Arslan", "Umer", "Momin", "Aamir", "Jameel"];
+  document.getElementById("myList").innerHTML = JSON.stringify(data);
+  var msg = "We need to find some users!";
+
+  //remove guest to the end of your list
+  function removeUser() {
+    const removeLast = data.pop();
+    if (data.length == 0) {
+      // window.write("only two guests are left, Dont remove");
+      document.getElementById("msg1").innerHTML = msg
+    }
+    else {
+      document.getElementById("removeLast").innerHTML = JSON.stringify(removeLast + " has been remove from list")
+    }
+  };
+
+
+</script>
+
+</html>

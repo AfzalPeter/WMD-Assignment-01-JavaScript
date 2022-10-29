@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+
+    <style>
+        .red { color: red; }
+        .yellow { color: yellow; }
+        .green { color: green; }
+    </style>
+</head>
+
+<body>
+    <h1>27. Alien Colors #3: </h1>
+    <p>
+        Turn your if-else chain from Exercise 5-4 into an if-else chain. <br>
+        • If the alien is green, print a message that the player earned 5 points. <br>
+        • If the alien is yellow, print a message that the player earned 10 points. <br>
+        • If the alien is red, print a message that the player earned 15 points. <br>
+        • Write three versions of this program, making sure each message is printed for the appropriate color alien.
+
+    </p>
+
+    <div>
+        <p class="red" id="red"></p>
+        <p class="yellow" id="yellow"></p>
+        <p class="green" id="green"></p>
+        <p id="msg"></p>
+    </div>
+
+
+</body>
+
+<script>
+    let alien_color = prompt("enter alien colour red, green, yellow");
+    let result = alien_color.toLowerCase()
+
+    if (result == "green") {
+        var greenMsg = "Player just earned 5 points for shooting the alien";
+        document.getElementById("green").innerHTML = greenMsg; }
+    else if (result == "yellow") {
+        var yellowMsg = "Player just earned 10 points for shooting the alien";
+        document.getElementById("yellow").innerHTML = yellowMsg; }
+    else if (result == "red") {
+        var redMsg = "Player just earned 15 points for shooting the alien";
+        document.getElementById("red").innerHTML = redMsg; }
+    else {
+        var msg = "enter alien colour red, green, yellow";
+        document.getElementById("msg").innerHTML = msg;  }
+</script>
+
+
+</html>

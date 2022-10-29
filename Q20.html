@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task2</title>
+
+</head>
+
+<body>
+  <h1>20. Think of something you could store in a array: </h1>
+  <p>For example, you could make a list of <br>
+    mountains, rivers, countries, cities, languages, or anything else you’d like. <br>
+    Write a program that creates a list containing these items.</p>
+  <hr>
+
+  <fieldset>
+    <legend>Make a list of Cities</legend>
+    <table>
+      <tr>
+        <td>Enter the Cites</td>
+        <td><input type="text" id="inputCity" /></td>
+      </tr>
+      <tr>
+        <p id="displayCity"></p>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="button" id="addCity" onclick="addRecordCity();">Add Cities </button>
+          <button type="button" id="displayCity" onclick="displayRecordCity();">Display Cities</button>
+        </td>
+
+      </tr>
+    </table>
+  </fieldset>
+  <hr>
+
+  <fieldset>
+    <legend>Make a list of countries</legend>
+    <table>
+      <tr>
+        <td>Enter the Countries</td>
+        <td><input type="text" id="inputCountries" /></td>
+      </tr>
+      <tr>
+        <p id="displayCountries"></p>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="button" id="addCountries" onclick="addRecordCountries();">Add Countries </button>
+          <button type="button" id="displayCountries" onclick="displayRecordCountries();">Display Countries</button>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <hr>
+
+  <fieldset>
+    <legend>Make a list of Languages</legend>
+    <table>
+      <tr>
+        <td>Enter the Languages</td>
+        <td><input type="text" id="inputLanguages" /></td>
+      </tr>
+      <tr>
+        <p id="displayLanguages"></p>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="button" id="addLanguages" onclick="addRecordLanguages();">Add Languages </button>
+          <button type="button" id="displayLanguages" onclick="displayRecordLanguages();">Display Languages</button>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <hr>
+
+  <fieldset>
+    <legend>Show the list of all three array</legend>
+    </tr>
+    <tr>
+      <p id="displayMergArray"></p>
+      <td></td>
+      <button type="button" id="displayMergArray" onclick="displayAllList(Cities, Countries, Languages);">Display All
+        Lists</button>
+      </td>
+    </tr>
+    </table>
+
+</body>
+
+<script>
+  const Cities = [];
+  const Countries = [];
+  const Languages = [];
+
+
+
+  function addRecordCity() {
+    var inp = document.getElementById('inputCity');
+    Cities.push(inp.value);
+    inp.value = "";
+  }
+
+  function displayRecordCity() {
+    document.getElementById("displayCity").innerHTML = Cities.join(", ");
+  }
+
+  function addRecordCountries() {
+    var inp = document.getElementById('inputCountries');
+    Countries.push(inp.value);
+    inp.value = "";
+  }
+
+  function displayRecordCountries() {
+    document.getElementById("displayCountries").innerHTML = Countries.join(", ");
+  }
+
+
+  function addRecordLanguages() {
+    var inp = document.getElementById('inputLanguages');
+    Languages.push(inp.value);
+    inp.value = "";
+  }
+
+  function displayRecordLanguages() {
+    document.getElementById("displayLanguages").innerHTML = Languages.join(", ");
+  }
+
+
+
+  function displayAllList(Cities, Countries, Languages) {
+    const result_array = [];
+    document.getElementById("displayMergArray").innerHTML = JSON.stringify(result_array.concat(Cities, Countries, Languages));
+
+  }
+
+</script>
+
+
+
+</html>
